@@ -1,0 +1,63 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies (if you add any in future)
+node_modules/
+bower_components/
+
+# Build outputs (if you add build process)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Environment variables (if added)
+.env
+.env.local
+.env.*.local
+
+# Testing (if added)
+coverage/
+.nyc_output/
+*.test.js
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Package manager locks (optional - depends on preference)
+# Uncomment if you don't want to commit lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
