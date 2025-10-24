@@ -3,648 +3,174 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#003B73" />
-<title>ÉBAN Blueprint — Ethical Social Tech Platform</title>
-<meta name="description" content="Privacy-first social care case management system. Ethical data handling with federated learning, consent management, and pseudonymization.">
+<title>ÉBAN — Explore Demos</title>
+
 <style>
-  :root{
-    --blue:#003B73;
-    --blue-2:#0B2A4A;
-    --navy:#002B5A;
-    --terra:#D9643A;
-    --terra-light:#FFE7DC;
-    --green:#0EAD69;
-    --bg:#F5F8FC;
-    --white:#FFFFFF;
-    --text-dark:#1a3a5a;
-    --muted:#4a5a6c;
-  }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #1a3a5a;
+  background: linear-gradient(135deg, #E8F0F7 0%, #D4E4F3 100%);
+  -webkit-font-smoothing: antialiased;
+}
 
-  *{box-sizing:border-box; margin:0; padding:0}
-  
-  body{
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--blue-2);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
+/* ====== Explore Demos Section ====== */
+.eban-demos {
+  background: transparent;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
 
-  /* Hero Section */
-  .hero{
-    background: linear-gradient(135deg, var(--navy), #053566, var(--blue));
-    color: white;
-    padding: 100px 20px 80px;
-    text-align: center;
-    position: relative;
-  }
+.eban-demos__title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: #003B73;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
 
-  .hero-logo{
-    font-size: 72px;
-    margin-bottom: 20px;
-    display: block;
-  }
+.eban-demos__subtitle {
+  font-size: 1.05rem;
+  color: #486581;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
 
-  .hero h1{
-    font-size: 56px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
-  }
+.eban-demos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
 
-  .hero .tagline{
-    font-size: 24px;
-    margin-bottom: 15px;
-    opacity: 0.95;
-    font-weight: 600;
-  }
+.eban-demos__card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 14px;
+  padding: 1.8rem 1.5rem;
+  text-decoration: none;
+  color: #1a3a5a;
+  border: 1.5px solid rgba(0,59,115,0.15);
+  box-shadow: 0 4px 16px rgba(0,59,115,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .hero .subtitle{
-    font-size: 18px;
-    opacity: 0.85;
-    max-width: 700px;
-    margin: 0 auto 40px;
-  }
+.eban-demos__card:hover {
+  transform: translateY(-4px);
+  border-color: #F28C28;
+  box-shadow: 0 8px 24px rgba(242,140,40,0.2);
+}
 
-  .cta-buttons{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-  }
+.eban-demos__icon {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
 
-  .btn{
-    padding: 16px 32px;
-    border-radius: 12px;
-    font-weight: 800;
-    font-size: 16px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-  }
+.eban-demos__card h3 {
+  font-size: 1.25rem;
+  color: #003B73;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
 
-  .btn-primary{
-    background: var(--terra);
-    color: white;
-    box-shadow: 0 8px 24px rgba(217,100,58,0.3);
-  }
+.eban-demos__card p {
+  font-size: 0.9375rem;
+  color: #486581;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
 
-  .btn-primary:hover{
-    background: #c54f29;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(217,100,58,0.4);
-  }
+.eban-demos__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
 
-  .btn-secondary{
-    background: rgba(255,255,255,0.15);
-    color: white;
-    border: 2px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(10px);
-  }
+.eban-demos__tags span {
+  background: rgba(0,59,115,0.08);
+  color: #003B73;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-  .btn-secondary:hover{
-    background: rgba(255,255,255,0.25);
-    border-color: rgba(255,255,255,0.5);
-  }
+.eban-demos__btn {
+  background: #F28C28;
+  color: white;
+  font-weight: 700;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
 
-  /* Container */
-  .container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+.eban-demos__card:hover .eban-demos__btn {
+  background: #c54f12;
+}
 
-  /* Section */
-  section{
-    padding: 80px 20px;
+@media (max-width: 600px) {
+  .eban-demos {
+    padding: 2rem 1rem;
   }
-
-  section h2{
-    font-size: 42px;
-    font-weight: 900;
-    color: var(--blue);
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  section .lead{
-    font-size: 20px;
-    color: var(--muted);
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 60px;
-  }
-
-  /* Features Grid */
-  .features{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-
-  .feature-card{
-    background: white;
-    padding: 40px 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-  }
-
-  .feature-card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.1);
-    border-color: var(--terra);
-  }
-
-  .feature-icon{
-    font-size: 48px;
-    margin-bottom: 20px;
-    display: block;
-  }
-
-  .feature-card h3{
-    font-size: 24px;
-    color: var(--blue);
-    margin-bottom: 12px;
-    font-weight: 800;
-  }
-
-  .feature-card p{
-    color: var(--text-dark);
-    font-size: 16px;
-  }
-
-  /* Demos Section */
-  .demos{
-    background: white;
-  }
-
-  .demo-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-
-  .demo-card{
-    background: var(--bg);
-    border-radius: 16px;
-    padding: 40px 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 3px solid transparent;
-    text-decoration: none;
-    display: block;
-    position: relative;
-  }
-
-  .demo-card:hover{
-    border-color: var(--terra);
-    transform: scale(1.03);
-  }
-
-  .demo-card .icon{
-    font-size: 64px;
-    margin-bottom: 20px;
-    display: block;
-  }
-
-  .demo-card h3{
-    font-size: 26px;
-    color: var(--blue);
-    margin-bottom: 12px;
-    font-weight: 800;
-  }
-
-  .demo-card p{
-    color: var(--text-dark);
-    margin-bottom: 20px;
-    font-size: 16px;
-    min-height: 72px;
-  }
-
-  .demo-tags{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .tag{
-    background: rgba(0,59,115,0.1);
-    color: var(--blue);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .demo-card .btn-demo{
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--terra);
-    color: white;
-    padding: 14px 28px;
-    border-radius: 10px;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    font-size: 15px;
-  }
-
-  .demo-card:hover .btn-demo{
-    background: #c54f29;
-  }
-
-  /* Tech Stack */
-  .tech-stack{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 40px;
-  }
-
-  .tech-badge{
-    background: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-weight: 700;
-    color: var(--blue);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  /* Values Section */
-  .values{
-    background: linear-gradient(135deg, rgba(0,59,115,0.03), rgba(14,173,105,0.03));
-  }
-
-  .values-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-
-  .value-item{
-    text-align: center;
-  }
-
-  .value-item .icon{
-    font-size: 56px;
-    margin-bottom: 15px;
-    display: block;
-  }
-
-  .value-item h3{
-    font-size: 20px;
-    color: var(--blue);
-    margin-bottom: 10px;
-    font-weight: 800;
-  }
-
-  .value-item p{
-    color: var(--text-dark);
-    font-size: 15px;
-  }
-
-  /* About Section */
-  .about{
-    background: white;
-  }
-
-  .about-content{
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .about-content h3{
-    font-size: 28px;
-    color: var(--blue);
-    margin: 30px 0 15px;
-    font-weight: 800;
-  }
-
-  .about-content p{
-    font-size: 17px;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-    line-height: 1.8;
-  }
-
-  .about-content ul{
-    list-style: none;
-    padding: 0;
-  }
-
-  .about-content ul li{
-    padding: 12px 0;
-    padding-left: 30px;
-    position: relative;
-    font-size: 16px;
-    color: var(--text-dark);
-  }
-
-  .about-content ul li:before{
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--green);
-    font-weight: 900;
-    font-size: 18px;
-  }
-
-  /* Footer */
-  footer{
-    background: var(--navy);
-    color: white;
-    padding: 60px 20px 30px;
-    text-align: center;
-  }
-
-  footer h3{
-    font-size: 32px;
-    margin-bottom: 15px;
-    font-weight: 900;
-  }
-
-  footer p{
-    opacity: 0.85;
-    margin-bottom: 30px;
-    font-size: 16px;
-  }
-
-  footer .links{
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-  }
-
-  footer a{
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    transition: opacity 0.3s ease;
-  }
-
-  footer a:hover{
-    opacity: 0.7;
-  }
-
-  footer .copyright{
-    opacity: 0.6;
-    font-size: 14px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255,255,255,0.2);
-  }
-
-  /* Responsive */
-  @media (max-width: 768px){
-    .hero h1{
-      font-size: 36px;
-    }
-    
-    .hero .tagline{
-      font-size: 20px;
-    }
-    
-    section h2{
-      font-size: 32px;
-    }
-    
-    .demo-grid{
-      grid-template-columns: 1fr;
-    }
-    
-    .cta-buttons{
-      flex-direction: column;
-    }
-  }
+}
 </style>
 </head>
+
 <body>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <span class="hero-logo">🛡️</span>
-    <h1>ÉBAN Blueprint</h1>
-    <p class="tagline">Making care visible through ethical data</p>
-    <p class="subtitle">Privacy-first social care case management system. Ethical data handling with federated learning, consent management, and pseudonymization. Built for digital inclusion & human dignity.</p>
-    
-    <div class="cta-buttons">
-      <a href="#demos" class="btn btn-primary">
-        🚀 Explore Demos
-      </a>
-      <a href="https://github.com/eban-prog/eban-blueprint-demo" target="_blank" class="btn btn-secondary">
-        💻 View on GitHub
-      </a>
-    </div>
+<section class="eban-demos">
+  <h2 class="eban-demos__title">Interactive Demos</h2>
+  <p class="eban-demos__subtitle">Choose the interface designed for your role in the ethical social care ecosystem</p>
+  
+  <div class="eban-demos__grid">
+    <!-- ÉBAN App -->
+    <a href="https://eban-prog.github.io/eban-blueprint-demo/ebanapp.html" target="_blank" class="eban-demos__card">
+      <span class="eban-demos__icon">🤝🏽</span>
+      <h3>ÉBAN App</h3>
+      <p>Document support with dignity, manage consent, and protect privacy.</p>
+      <div class="eban-demos__tags">
+        <span>Care Providers</span>
+        <span>Case Management</span>
+        <span>Privacy‑First</span>
+      </div>
+      <span class="eban-demos__btn">🚀 Launch App →</span>
+    </a>
+
+    <!-- Institutional Dashboard -->
+    <a href="https://eban-prog.github.io/eban-blueprint-demo/dashboard-institutional.html" target="_blank" class="eban-demos__card">
+      <span class="eban-demos__icon">📊</span>
+      <h3>Institutional Dashboard</h3>
+      <p>Monitor metrics, resource allocation, and team performance across programs.</p>
+      <div class="eban-demos__tags">
+        <span>Organizations</span>
+        <span>Analytics</span>
+        <span>Oversight</span>
+      </div>
+      <span class="eban-demos__btn">📈 Launch Dashboard →</span>
+    </a>
+
+    <!-- Social Observatory -->
+    <a href="https://eban-prog.github.io/eban-blueprint-demo/observatory-social.html" target="_blank" class="eban-demos__card">
+      <span class="eban-demos__icon">🔍</span>
+      <h3>Social Observatory</h3>
+      <p>Analyze anonymized data, identify systemic issues, and drive advocacy.</p>
+      <div class="eban-demos__tags">
+        <span>Research</span>
+        <span>Policy</span>
+        <span>Insights</span>
+      </div>
+      <span class="eban-demos__btn">🧭 Explore Observatory →</span>
+    </a>
   </div>
 </section>
-
-<!-- Features Section -->
-<section class="features-section">
-  <div class="container">
-    <h2>Core Features</h2>
-    <p class="lead">Built on principles of transparency, consent, and human dignity</p>
-    
-    <div class="features">
-      <div class="feature-card">
-        <span class="feature-icon">🔐</span>
-        <h3>Privacy by Design</h3>
-        <p>Pseudonymization, encryption, and zero-knowledge architecture ensure individual privacy while maintaining data utility.</p>
-      </div>
-      
-      <div class="feature-card">
-        <span class="feature-icon">🤝</span>
-        <h3>Informed Consent</h3>
-        <p>Radical transparency with clear consent protocols. People control their data with full understanding of usage.</p>
-      </div>
-      
-      <div class="feature-card">
-        <span class="feature-icon">🌍</span>
-        <h3>Federated Learning</h3>
-        <p>Share insights without sharing raw data. Collective wisdom while protecting individual identities.</p>
-      </div>
-      
-      <div class="feature-card">
-        <span class="feature-icon">📊</span>
-        <h3>Impact Analytics</h3>
-        <p>Track care outcomes, resource allocation, and systemic patterns for evidence-based policy advocacy.</p>
-      </div>
-      
-      <div class="feature-card">
-        <span class="feature-icon">♿</span>
-        <h3>Digital Inclusion</h3>
-        <p>Accessible, intuitive interfaces designed for frontline workers and vulnerable populations.</p>
-      </div>
-      
-      <div class="feature-card">
-        <span class="feature-icon">⚖️</span>
-        <h3>GDPR Compliant</h3>
-        <p>Full compliance with data protection regulations while prioritizing human dignity over mere legal requirements.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Demos Section -->
-<section id="demos" class="demos">
-  <div class="container">
-    <h2>Interactive Demos</h2>
-    <p class="lead">Choose the interface designed for your role in the ethical social care ecosystem</p>
-    
-    <div class="demo-grid">
-      
-      <!-- Demo 1: ÉBAN App -->
-      <a href="ebanapp.html" class="demo-card">
-        <span class="icon">🤝</span>
-        <h3>ÉBAN App</h3>
-        <p>For care providers and frontline workers. Document support with dignity, manage consent, and protect privacy.</p>
-        <div class="demo-tags">
-          <span class="tag">Care Providers</span>
-          <span class="tag">Case Management</span>
-          <span class="tag">Privacy-First</span>
-        </div>
-        <span class="btn-demo">Launch App →</span>
-      </a>
-
-      <!-- Demo 2: Institutional Dashboard -->
-      <a href="dashboard-institutional.html" class="demo-card">
-        <span class="icon">📊</span>
-        <h3>Institutional Dashboard</h3>
-        <p>For organizations managing multiple programs. Monitor impact metrics, resource allocation, and team performance.</p>
-        <div class="demo-tags">
-          <span class="tag">Organizations</span>
-          <span class="tag">Analytics</span>
-          <span class="tag">Oversight</span>
-        </div>
-        <span class="btn-demo">Launch Dashboard →</span>
-      </a>
-
-      <!-- Demo 3: Social Observatory -->
-      <a href="observatory-social.html" class="demo-card">
-        <span class="icon">🔍</span>
-        <h3>Social Observatory</h3>
-        <p>For researchers and policy makers. Analyze anonymized data, identify systemic issues, and drive evidence-based advocacy.</p>
-        <div class="demo-tags">
-          <span class="tag">Research</span>
-          <span class="tag">Policy</span>
-          <span class="tag">Insights</span>
-        </div>
-        <span class="btn-demo">Launch Observatory →</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- Values Section -->
-<section class="values">
-  <div class="container">
-    <h2>Our Core Values</h2>
-    <p class="lead">Technology in service of humanity</p>
-    
-    <div class="values-grid">
-      <div class="value-item">
-        <span class="icon">💙</span>
-        <h3>Human Dignity</h3>
-        <p>People aren't "data subjects" — they're human beings deserving respect and agency.</p>
-      </div>
-      
-      <div class="value-item">
-        <span class="icon">🌱</span>
-        <h3>Transparency</h3>
-        <p>Clear communication about data collection, usage, and rights at every step.</p>
-      </div>
-      
-      <div class="value-item">
-        <span class="icon">🤲</span>
-        <h3>Empowerment</h3>
-        <p>Tools that amplify the voices of caregivers and vulnerable populations.</p>
-      </div>
-      
-      <div class="value-item">
-        <span class="icon">🔒</span>
-        <h3>Privacy</h3>
-        <p>Protection by design, not as an afterthought. Privacy is a human right.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- About Section -->
-<section class="about">
-  <div class="container">
-    <h2>About ÉBAN</h2>
-    <p class="lead">Ethical Social Tech for Digital Inclusion</p>
-    
-    <div class="about-content">
-      <p>ÉBAN (Ethical Blueprint for Anonymous Networks) is a comprehensive platform designed to support social care organizations in managing cases while respecting individual privacy and dignity.</p>
-      
-      <h3>🎯 Problem We Solve</h3>
-      <p>Social care organizations face a dilemma: they need to document cases for quality improvement and advocacy, but traditional systems compromise individual privacy and dignity. Many vulnerable populations are understandably reluctant to share sensitive information.</p>
-      
-      <h3>💡 Our Solution</h3>
-      <p>ÉBAN combines cutting-edge privacy technologies with human-centered design to create a system where:</p>
-      <ul>
-        <li>Individual identities are protected through pseudonymization</li>
-        <li>Consent is informed, explicit, and revocable</li>
-        <li>Data sharing is voluntary and always anonymized</li>
-        <li>Insights emerge without compromising individual stories</li>
-        <li>Frontline workers can focus on care, not bureaucracy</li>
-      </ul>
-      
-      <h3>🌍 Impact</h3>
-      <p>By enabling ethical data practices, ÉBAN helps organizations identify systemic issues, allocate resources effectively, and advocate for policy changes — all while keeping every individual's identity completely protected and sacred.</p>
-      
-      <h3>🛠️ Technology Stack</h3>
-      <div class="tech-stack">
-        <span class="tech-badge">HTML5</span>
-        <span class="tech-badge">JavaScript</span>
-        <span class="tech-badge">CSS3</span>
-        <span class="tech-badge">Privacy-First</span>
-        <span class="tech-badge">GDPR Compliant</span>
-        <span class="tech-badge">Accessibility</span>
-        <span class="tech-badge">Zero Dependencies</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <h3>✊🏾 Join the Movement</h3>
-    <p>Building technology that respects human dignity</p>
-    
-    <div class="links">
-      <a href="https://github.com/eban-prog/eban-blueprint-demo" target="_blank">GitHub</a>
-      <a href="#demos">Demos</a>
-      <a href="mailto:contact@eban.org">Contact</a>
-      <a href="https://github.com/eban-prog/eban-blueprint-demo/blob/main/LICENSE" target="_blank">MIT License</a>
-    </div>
-    
-    <p class="copyright">
-      © 2025 ÉBAN Blueprint — Making care visible through ethical data
-    </p>
-  </div>
-</footer>
 
 </body>
 </html>
+
+
