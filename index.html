@@ -114,6 +114,31 @@ body {
   background: #c54f12;
 }
 
+/* CTA e rodapé ético */
+.eban-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #F28C28;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.eban-cta {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+}
+
+.eban-ethics {
+  text-align: center;
+}
+
+
 @media (max-width: 600px) {
   .eban-demos {
     padding: 2rem 1rem;
@@ -125,41 +150,42 @@ body {
 <body>
 
 <section class="eban-demos">
-  <h2 class="eban-demos__title">Interactive Demos</h2>
-  <p class="eban-demos__subtitle">Choose the interface designed for your role in the ethical social care ecosystem</p>
-  
-  <div class="eban-demos__grid">
-    <!-- ÉBAN App -->
-    <a href="https://eban-prog.github.io/eban-blueprint-demo/ebanapp.html" target="_blank" class="eban-demos__card">
-      <span class="eban-demos__icon">🤝🏽</span>
-      <h3>ÉBAN App</h3>
-      <p>Document support with dignity, manage consent, and protect privacy.</p>
-      <div class="eban-demos__tags">
-        <span>Care Providers</span>
-        <span>Case Management</span>
-        <span>Privacy‑First</span>
-      </div>
-      <span class="eban-demos__btn">🚀 Launch App →</span>
-    </a>
+  <h2 class="eban-demos__title">ÉBAN Blueprint Demo</h2>
+  <p class="eban-demos__subtitle">Transforming social records into collective evidence — with dignity, privacy and trust.</p>
+    <!-- Intro microcopy -->
+  <p class="eban-demos__intro">
+    ÉBAN was born from the frontline of social work. We help care providers, organizations and policymakers turn fragmented records into ethical, actionable insights — without compromising humanity.
+  </p>
 
-    <!-- Institutional Dashboard -->
+  <div class="eban-demos__grid">
+  <!-- ÉBAN App -->
+<a href="https://eban-prog.github.io/eban-blueprint-demo/ebanapp.html" target="_blank" class="eban-demos__card">
+  <span class="eban-demos__icon">🤝🏽</span>
+  <h3>ÉBAN App</h3>
+  <p>Every record tells a human story. Document support with dignity, manage consent, and protect privacy.</p>
+  <div class="eban-demos__tags">
+    <span>Care Providers</span><span>Case Management</span><span>Privacy‑First</span>
+  </div>
+  <span class="eban-demos__btn">🚀 Open App →</span>
+</a>
+    <!-- Organizations Dashboard -->
     <a href="https://eban-prog.github.io/eban-blueprint-demo/dashboard-institutional.html" target="_blank" class="eban-demos__card">
       <span class="eban-demos__icon">📊</span>
-      <h3>Institutional Dashboard</h3>
-      <p>Monitor metrics, resource allocation, and team performance across programs.</p>
+      <h3>Organizations Dashboard</h3>
+      <p>From fragmented data to organizational clarity. Track outcomes, allocate resources, and empower teams.</p>
       <div class="eban-demos__tags">
         <span>Organizations</span>
         <span>Analytics</span>
         <span>Oversight</span>
       </div>
-      <span class="eban-demos__btn">📈 Launch Dashboard →</span>
+      <span class="eban-demos__btn">📈 View Dashboard →</span>
     </a>
 
     <!-- Social Observatory -->
     <a href="https://eban-prog.github.io/eban-blueprint-demo/observatory-social.html" target="_blank" class="eban-demos__card">
       <span class="eban-demos__icon">🔍</span>
       <h3>Social Observatory</h3>
-      <p>Analyze anonymized data, identify systemic issues, and drive advocacy.</p>
+      <p>Aggregated, anonymized data reveals systemic patterns — building the first ethical observatory for social inclusion.</p>
       <div class="eban-demos__tags">
         <span>Research</span>
         <span>Policy</span>
@@ -169,8 +195,16 @@ body {
     </a>
   </div>
 </section>
+<!-- ETHICAL FOOTER -->
+<p class="eban-ethics">
+  All data in this demo is fictitious and anonymized. Ethics first, always.
+</p>
+  <!-- CALL TO ACTION -->
+  <a class="eban-cta"
+     href="https://eban-prog.github.io/eban-blueprint-demo/join.html"
+     target="_blank" aria-label="Join the Ethical Data Movement">
+    <span class="eban-demos__btn">🌍 Join the Ethical Data Movement</span></a>
+</section>
 
 </body>
 </html>
-
-
